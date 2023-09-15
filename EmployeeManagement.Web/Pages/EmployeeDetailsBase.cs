@@ -18,7 +18,7 @@ namespace EmployeeManagement.Web.Pages
         public string Id { get; set; }
         protected async override Task OnInitializedAsync()
         {
-            Id = Id ?? "1";
+            Id ??= "1";
             Employee = await EmployeeService.GetEmployee(int.Parse(Id));
         }
         protected void Button_Click()
